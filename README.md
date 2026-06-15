@@ -21,6 +21,7 @@ Formulasi ini dipilih karena dataset bersifat **per order**, bukan data rute ken
 ```text
 .
 |-- README.md
+|-- requirements.txt
 |-- 02_dataset_formulation_preprocessing.ipynb
 |-- data
 |   |-- raw
@@ -37,6 +38,7 @@ Formulasi ini dipilih karena dataset bersifat **per order**, bukan data rute ken
 | Output | Lokasi | Fungsi |
 |---|---|---|
 | Notebook preprocessing | `02_dataset_formulation_preprocessing.ipynb` | Proses download, cek data, cleaning, feature engineering, penyimpanan data, dan formulasi masalah |
+| Requirements | `requirements.txt` | Daftar package Python yang dibutuhkan notebook |
 | Dataset mentah | `data/raw/amazon_delivery.csv` | Dataset asli dari Kaggle tanpa modifikasi |
 | Dataset bersih | `data/processed/amazon_delivery_cleaned.csv` | Dataset siap pakai untuk implementasi GA |
 | Ringkasan kualitas data | `data/processed/data_quality_summary.csv` | Jumlah baris/kolom sebelum dan sesudah preprocessing |
@@ -347,6 +349,14 @@ numpy
 kagglehub
 ```
 
+Package tersebut sudah ditulis di:
+
+```text
+requirements.txt
+```
+
+Notebook akan membaca `requirements.txt`, mengecek package yang belum tersedia, lalu hanya menginstall package yang belum ada. Jika package sudah terinstall, notebook tidak akan menginstall ulang.
+
 Alur notebook:
 
 1. Download dataset Kaggle.
@@ -368,9 +378,10 @@ Output bagian ini sudah menyiapkan dasar yang kuat untuk proyek metaheuristik. D
 Output utama:
 
 1. `02_dataset_formulation_preprocessing.ipynb`
-2. `data/raw/amazon_delivery.csv`
-3. `data/processed/amazon_delivery_cleaned.csv`
-4. `data/processed/data_quality_summary.csv`
-5. `data/processed/priority_risk_delivery_time_metrics.csv`
-6. `data/processed/priority_risk_delivery_time_quintile_summary.csv`
-7. `README.md`
+2. `requirements.txt`
+3. `data/raw/amazon_delivery.csv`
+4. `data/processed/amazon_delivery_cleaned.csv`
+5. `data/processed/data_quality_summary.csv`
+6. `data/processed/priority_risk_delivery_time_metrics.csv`
+7. `data/processed/priority_risk_delivery_time_quintile_summary.csv`
+8. `README.md`
